@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Atharva R Kulkarni</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="Screenshot 2026-10-08 222254.png">
+  <style>
+    /* Clone project cards */
+    .clone-grid {
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+      align-items:stretch;
+    }
+    .clone-card {
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      min-width:0;
+      border-radius:20px;
+      overflow:hidden;
+    }
+    .clone-art {
+      min-height:190px;
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+      flex-shrink:0;
+    }
+    .clone-art span {
+      position:relative;
+      z-index:1;
+      font:800 clamp(30px, 4vw, 48px) Orbitron;
+      letter-spacing:-2px;
+    }
+    .netflix-art {
+      background:radial-gradient(circle at center, rgba(229,9,20,.25), transparent 55%), #09090b;
+    }
+    .netflix-art span {
+      color:#fff;
+      text-shadow:0 0 30px rgba(229,9,20,.55);
+    }
+    .spotify-art {
+      background:radial-gradient(circle at center, rgba(30,215,96,.20), transparent 55%), #09090b;
+    }
+    .spotify-art span {
+      color:#fff;
+      text-shadow:0 0 30px rgba(30,215,96,.4);
+    }
+    .clone-body {
+      padding:26px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+      min-width:0;
+    }
+    .clone-body h3 {
+      font:700 24px Orbitron;
+      margin-bottom:12px;
+    }
+    .clone-body > p:not(.eyebrow) {
+      color:#aaa;
+      font-size:14px;
+      margin:0;
+      min-height:68px;
+    }
+    .clone-body .tech-list {
+      margin:20px 0 24px;
+    }
+    .clone-body .btn {
+      align-self:flex-start;
+      margin-top:auto;
+    }
+    @media (max-width:850px) {
+      .clone-grid { grid-template-columns:1fr; }
+    }
+    @media (max-width:600px) {
+      .clone-art { min-height:160px; }
+      .clone-body { padding:24px; }
+      .clone-body > p:not(.eyebrow) { min-height:0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="navbar">
+    <a class="brand" href="index.html"><span>AR</span> ATHARVA</a>
+    <button class="menu-toggle" aria-label="Open navigation">☰</button>
+    <nav class="nav-links"><a href="index.html">Home</a><a href="resume.html">Resume</a><a href="biodata.html">Bio-data</a><a class="active" href="projects.html">Projects</a></nav>
+  </header>
+
+  <main class="page-shell inner-page">
+    <div class="page-title">
+      <p class="eyebrow">SELECTED WORK / 03</p>
+      <h1>Things I've <span>built.</span></h1>
+      <p>A showcase of academic work, technical interests and the stack behind them.</p>
+    </div>
+
+    <section class="project-feature glass">
+      <div class="project-visual">
+        <div class="visual-grid"></div>
+        <div class="visual-logo">GYM<span>+</span></div>
+      </div>
+      <div class="project-info">
+        <p class="eyebrow">DBMS PROJECT</p>
+        <h2>Gym Membership<br><span>Management System</span></h2>
+        <p>A database-driven web application developed as a DBMS mini project. The system adapts a management workflow to a gym environment with customers, trainers, memberships and bookings.</p>
+        <div class="tech-list"><span>Python</span><span>Flask</span><span>MySQL</span><span>SQLAlchemy</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>JavaScript</span></div>
+        <a href="resume.html" class="btn btn-primary">View project details ↗</a>
+      </div>
+    </section>
+
+    <section class="clone-projects section">
+      <div class="section-heading">
+        <div><p class="eyebrow">WEB DEVELOPMENT PROJECTS</p><h2>My <span>clones.</span></h2></div>
+      </div>
+
+      <div class="clone-grid">
+        <article class="clone-card glass">
+          <div class="clone-art netflix-art"><span>NETFLIX</span></div>
+          <div class="clone-body">
+            <p class="eyebrow">FRONTEND CLONE</p>
+            <h3>Netflix Clone</h3>
+            <p>A Netflix-inspired streaming landing page with a hero section, trending content, membership CTA, feature cards, FAQ section and responsive visual styling.</p>
+            <div class="tech-list"><span>HTML5</span><span>CSS3</span><span>Responsive UI</span></div>
+            <a class="btn btn-primary" href="netflix-clone/index.html" target="_blank" rel="noopener">Open Netflix Clone ↗</a>
+          </div>
+        </article>
+
+        <article class="clone-card glass">
+          <div class="clone-art spotify-art"><span>SPOTIFY</span></div>
+          <div class="clone-body">
+            <p class="eyebrow">WEB PLAYER CLONE</p>
+            <h3>Spotify Clone</h3>
+            <p>A Spotify-inspired web player featuring library sections, trending songs, artists, albums, radio, charts and an interactive audio player.</p>
+            <div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Audio API</span></div>
+            <a class="btn btn-primary" href="spotify-clone/index.html" target="_blank" rel="noopener">Open Spotify Clone ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><div><p class="eyebrow">TECHNOLOGY STACK</p><h2>My development <span>toolbox.</span></h2></div></div>
+      <div class="stack-grid">
+        <article class="stack-card glass"><b>01</b><h3>Frontend</h3><p>React.js<br>Next.js<br>Tailwind CSS<br>HTML5 / CSS3</p></article>
+        <article class="stack-card glass"><b>02</b><h3>Backend</h3><p>Node.js<br>Express.js<br>REST APIs<br>JavaScript</p></article>
+        <article class="stack-card glass"><b>03</b><h3>Database</h3><p>MongoDB<br>MySQL<br>SQLAlchemy<br>CRUD Operations</p></article>
+        <article class="stack-card glass"><b>04</b><h3>Design & Tools</h3><p>Figma<br>FileZilla<br>Git / GitHub<br>VS Code / npm</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading"><div><p class="eyebrow">ACADEMIC AREAS</p><h2>Beyond the <span>UI.</span></h2></div></div>
+      <div class="feature-grid">
+        <article class="feature-card glass"><div class="icon">▦</div><h3>Data Structures</h3><p>Working with algorithms, complexity analysis, trees, sorting, searching and core data structures.</p></article>
+        <article class="feature-card glass"><div class="icon">◫</div><h3>Database Systems</h3><p>ER modeling, normalization, transactions, concurrency and practical SQL/database design.</p></article>
+        <article class="feature-card glass"><div class="icon">◉</div><h3>Systems</h3><p>Academic exposure to operating systems, memory management, scheduling and computer architecture.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><span>ATHARVA R KULKARNI</span><span>Selected Work</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
